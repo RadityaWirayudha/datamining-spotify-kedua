@@ -18,6 +18,7 @@ def load_assets():
     try:
         df = pd.read_csv('spotify_deployed.csv')
 
+st.write("🔍 DAFTAR KOLOM YANG TERBACA STREAMLIT:", df.columns.tolist())
         with open('scaler_spotify.pkl', 'rb') as f:
             scaler = pickle.load(f)
         with open('kmeans_spotify.pkl', 'rb') as f:
